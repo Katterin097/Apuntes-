@@ -91,7 +91,7 @@ from dual; --Devuelve: 3
 ----------SYSDATE: Devuelve la fecha actual
 select sysdate
 from dual;
-
+¿8.
 
 ----------current_date: Devuelve la fecha actual de la sesión del usuario
 select current_date
@@ -105,4 +105,48 @@ from dual;
 
 ----------EXTRACT: Extrae un componente especifico de una fecha (año, mes, dia, etc)
 select extract(year from fec_nacimiento)
+from bas_tercero;
+
+
+----------ADD_MONTHS: Agrega un número de meses
+select add_months(fec_nacimiento, 3) as fecha
 from bas_tercero
+where id_tercero = 30936; --Devuelve: 07/07/2003 (su fecha era 07/04/2003)
+
+
+----------MONTHS_BETWEEN: Devuelve el número de meses que hay entre 2 fechas
+select months_between(a.fec_nacimiento, b.fec_nacimiento)
+from bas_tercero a, bas_tercero b
+where a.id_tercero = 31171 --(07/04/2003)
+and b.id_tercero = 31172; --(07/05/2003) Devuelve 1
+
+
+----------LAST_DAY: Devuelve la fecha del último día del mes de la fecha proporcionada
+select last_day(fec_nacimiento)
+from bas_tercero
+where id_tercero = 30936; --30/04/2003
+
+
+----------NEXT_DAY: Devuelve la fecha posterior a la fecha proporcionada
+select next_day(sysdate, 'viernes')
+from dual; --Devuelve la fecha del siguiente viernes a la fecha actual (Ej. Hoy es 19/05, devuelve 23/05)
+
+
+
+----------TO_NUMBER: Convierte una cadena a un valor númérico
+select to_number(num_identificacion)
+from bas_tercero
+where id_tercero = 868498;
+
+
+----------TO_CHAR: Convierte un número o fecha en una cdena de texto
+select to_char(id_tercero)
+from bas_tercero
+where id_tercero = 868498;
+
+
+----------TO_DATE: Convierte una cadena a un valor de fecha (ejemplo largo)
+select to_date(fecha_date) as fecha_text
+from (select to_char(fec_nacimiento) as fecha_date
+      from bas_tercero
+); --Se convirtió fec_nacimiento en texto, y luego se convirtió a tipo date 
