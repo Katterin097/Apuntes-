@@ -6,6 +6,41 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Inheritance",
+            "request": "launch",
+            "mainClass": "Inheritance",
+            "projectName": "Katterin-Apuntes_6ed447ed"
+        },
+        {
+            "type": "java",
+            "name": "Builder",
+            "request": "launch",
+            "mainClass": "Builder",
+            "projectName": "Katterin-Apuntes_6ed447ed"
+        },
+        {
+            "type": "java",
+            "name": "methodOverloading",
+            "request": "launch",
+            "mainClass": "methodOverloading",
+            "projectName": "Katterin-Apuntes_6ed447ed"
+        },
+        {
+            "type": "java",
+            "name": "resultados",
+            "request": "launch",
+            "mainClass": "resultados",
+            "projectName": "Katterin-Apuntes_6ed447ed"
+        },
+        {
+            "type": "java",
+            "name": "Metodos",
+            "request": "launch",
+            "mainClass": "Metodos",
+            "projectName": "Katterin-Apuntes_6ed447ed"
+        },
+        {
+            "type": "java",
             "name": "Array",
             "request": "launch",
             "mainClass": "Array",
