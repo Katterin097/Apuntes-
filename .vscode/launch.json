@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ExerciseInterface",
+            "request": "launch",
+            "mainClass": "ExerciseInterface",
+            "projectName": "Katterin-Apuntes_6ed447ed"
+        },
+        {
+            "type": "java",
+            "name": "Interface",
+            "request": "launch",
+            "mainClass": "Interface",
+            "projectName": "Katterin-Apuntes_6ed447ed"
+        },
+        {
+            "type": "java",
             "name": "Inheritance",
             "request": "launch",
             "mainClass": "Inheritance",
